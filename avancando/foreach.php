@@ -2,22 +2,22 @@
 //usando índices//
 
 $clientes = [
- 123542366 => [
-  'titular' => 'Wellington', 
-  'saldo' => 11000
-], 
- 123433456 => [
-  'titular' => 'Vinicius',
-  'saldo' => 12999
-], 
- 542354673 => [
-  'titular' => 'Erick',
-  'saldo' => 50900
-], 
- 123435623 => [
-  'titular' => 'Alan', 
-  'saldo' => 500
-]
+  123542366 => [
+    'titular' => 'Wellington', 
+    'saldo' => 11000
+  ], 
+  123433456 => [
+    'titular' => 'Vinicius',
+    'saldo' => 12999
+  ], 
+  542354673 => [
+    'titular' => 'Erick',
+    'saldo' => 50900
+  ], 
+  123435623 => [
+    'titular' => 'Alan', 
+    'saldo' => 500
+  ]
 ];
 
 $clientes[32541232] = [ //colocando um novo cliente pelo indice//
