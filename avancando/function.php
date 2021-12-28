@@ -1,42 +1,27 @@
 <?php
-
-function exibeMensagem($mensagem){
+// definir nas funções o tipo de parametro: array, string, float
+function exibeMensagem(string $mensagem) {
   echo $mensagem . PHP_EOL;
 }
 
-$clientes = [
-  123542366 => [
-    'titular' => 'Wellington', 
-    'saldo' => 11000
-  ], 
-  123433456 => [
-    'titular' => 'Vinicius',
-    'saldo' => 12999
-  ], 
-  542354673 => [
-    'titular' => 'Erick',
-    'saldo' => 50900
-  ], 
-  123435623 => [
-    'titular' => 'Alan', 
-    'saldo' => 500
-  ]
-];
+function sacar(array $conta, float $valorASacar) : array {
+  if ($valorASacar > $conta['saldo']) {
+    exibeMensagem("Você não pode sacar");
+  } else{
+    $conta['saldo'] -= $valorASacar;
+  }
+  
+  return $conta;
+}
 
+function depositar(array $conta, float $valorADepositar) : array {
+  if ($valorADepositar > 0){
+    $conta['saldo'] += $valorADepositar;
+  } else{
+    exibeMensagem("Somente depositos positivos");
+  }
 
-exibeMensagem("você não pode fazer isso meu amigo foca aí");
-exibeMensagem("você não pode fazer isso meu amigo cu aí");
-exibeMensagem("você não pode fazer isso meu ronaldo foca aí");
-
-
-
-
-
-
-
-
-
-
-
+  return $conta;
+}
 
 
