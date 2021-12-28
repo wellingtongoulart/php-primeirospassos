@@ -28,4 +28,4 @@ $clientes[32541232] = [ //colocando um novo cliente pelo indice//
 foreach ($clientes as $cpf => $conta) {
   echo $conta['titular'] . PHP_EOL;
 } //grupo complexo de arrays dentro de variáveis com índices - atenção para o $conta//
-//atenção cpf seta conta//
+//atenção cpf seta conta// 
