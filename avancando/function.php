@@ -1,7 +1,8 @@
 <?php
+
 // definir nas funções o tipo de parametro: array, string, float
 function exibeMensagem(string $mensagem) {
-  echo $mensagem . PHP_EOL;
+  echo $mensagem . "<br>";
 }
 
 function sacar(array $conta, float $valorASacar) : array {
@@ -24,4 +25,8 @@ function depositar(array $conta, float $valorADepositar) : array {
   return $conta;
 }
 
+function exibeConta(array $conta){
+  ['titular' => $titular, 'saldo' => $saldo] = $conta;
+  exibeMensagem("<li>Titular: $titular. Saldo: $saldo:</li>");
+}
 
